@@ -1,5 +1,6 @@
 import { ArrowRight, Menu } from 'lucide-react';
 import Link from 'next/link';
+import Logo from '@/public/logo.png';
 
 const navbarItems = [
   {
@@ -28,14 +29,17 @@ export const Navbar = () => {
         <nav className="py-4 flex justify-between items-center">
           <Link href="#">
             <img
-              src="/logo.png"
+              src={Logo.src}
               alt="Logo da L&S Advocacia"
               className="w-30 h-14"
             />
           </Link>
           <ul className="hidden lg:flex ul">
             {navbarItems.map((item, index) => (
-              <li key={index} className='hover:text-primary hover:font-semibold'>
+              <li
+                key={index}
+                className="hover:text-primary hover:font-semibold"
+              >
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}

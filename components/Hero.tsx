@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCheck } from 'lucide-react';
 import Link from 'next/link';
+import HeroBg from '@/public/hero-bg.jpg';
 
 const stats = [
   { value: '+850', label: 'Clientes Atendidos' },
@@ -10,7 +11,7 @@ const stats = [
 export const Hero = () => {
   return (
     <section className="min-h-screen pt-32 lg:pt-20 flex items-center ">
-      <div className=" max-w-screen-xl mx-auto px-4 flex items-center">
+      <div className=" max-w-screen-xl mx-auto px-4">
         <div className="w-full lg:max-w-1/2 flex flex-col items-center lg:text-left text-center lg:justify-start lg:items-start">
           <span className="uppercase text-primary font-semibold mb-4 flex items-center gap-2">
             <CheckCheck
@@ -34,9 +35,9 @@ export const Hero = () => {
             <ArrowRight size={16} />
           </Link>
 
-          <div className="mt-8 w-full md:w-auto">
+          <div className="mt-8 w-full">
             <div>
-              <div className="bg-white rounded-2xl shadow-md p-6 flex">
+              <div className="bg-white rounded-2xl shadow-md flex">
                 <div className="grid w-full grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
                   {stats.map((stat, index) => (
                     <div
@@ -56,14 +57,14 @@ export const Hero = () => {
               <img
                 src="/hero-bg.jpg"
                 alt=""
-                className='lg:hidden rounded-lg w-full bg-cover mt-8'
+                className="lg:hidden rounded-lg w-full bg-cover mt-8"
               />
             </div>
           </div>
         </div>
 
         <img
-          src="/hero-bg.jpg"
+          src={HeroBg.src}
           alt="Imagem principal: Advogada fazendo uma apresentação"
           className="hidden lg:block w-[45%] h-full object-cover object-center absolute top-0 right-0"
         />
