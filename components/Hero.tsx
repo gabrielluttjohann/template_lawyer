@@ -55,7 +55,7 @@ export const Hero = () => {
                 </div>
               </div>
               <img
-                src="/hero-bg.jpg"
+                src={HeroBg.src}
                 alt=""
                 className="lg:hidden rounded-lg w-full bg-cover mt-8"
               />
