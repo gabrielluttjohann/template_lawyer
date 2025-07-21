@@ -4,14 +4,14 @@ import HeroBg from '@/public/hero-bg.jpg';
 
 const stats = [
   { value: '+850', label: 'Clientes Atendidos' },
-  { value: '+550', label: 'Milhões renegociados' },
+ 
   { value: '+760', label: 'Processos' },
 ];
 
 export const Hero = () => {
   return (
     <section className="min-h-screen pt-32 lg:pt-20 flex items-center ">
-      <div className=" max-w-screen-xl mx-auto px-4">
+      <div className=" max-w-screen-xl mx-auto w-full px-4">
         <div className="w-full lg:max-w-1/2 flex flex-col items-center lg:text-left text-center lg:justify-start lg:items-start">
           <span className="uppercase text-primary font-semibold mb-4 flex items-center gap-2">
             <CheckCheck
@@ -21,7 +21,7 @@ export const Hero = () => {
             Mais de 15 anos de experiência
           </span>
           <h1 className="heading-1 mb-4">
-            Especialistas em Dívidas Bancárias e Proteção Patrimonial
+            Advogados Especialistas em Direito Bancário
           </h1>
           <p className="lead mb-8">
             Soluções jurídicas rápidas e seguras para quem está em situação de endividamento.
@@ -35,10 +35,10 @@ export const Hero = () => {
             <ArrowRight size={16} />
           </Link>
 
-          <div className="mt-8 w-full">
+          <div className="mt-8 ">
             <div>
               <div className="bg-white rounded-2xl shadow-md flex">
-                <div className="grid w-full grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div className="grid divide-x grid-cols-2 divide-gray-200">
                   {stats.map((stat, index) => (
                     <div
                       key={index}
