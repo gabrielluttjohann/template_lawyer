@@ -1,72 +1,44 @@
-import { ArrowRight, CheckCheck } from 'lucide-react';
-import Link from 'next/link';
-import HeroBg from '@/public/hero-bg.jpg';
-
-const stats = [
-  { value: '+850', label: 'Clientes Atendidos' },
- 
-  { value: '+760', label: 'Processos' },
-];
+import { Button } from './ui/Button';
+import heroImg from '@/public/hero.png';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen pt-32 lg:pt-20 flex items-center ">
-      <div className=" max-w-screen-xl mx-auto w-full px-4">
-        <div className="w-full lg:max-w-1/2 flex flex-col items-center lg:text-left text-center lg:justify-start lg:items-start">
-          <span className="uppercase text-primary font-semibold mb-4 flex items-center gap-2">
-            <CheckCheck
-              fill="bg-primary"
-              className="w-5 h-5"
-            />
-            Mais de 15 anos de experiência
-          </span>
-          <h1 className="heading-1 mb-4">
-            Advogados Especialistas em Direito Bancário
-          </h1>
-          <p className="lead mb-8">
-            Soluções jurídicas rápidas e seguras para quem está em situação de endividamento.
-          </p>
+    <section
+      id="hero"
+      className="pt-40 pb-24 bg-black text-white"
+    >
+      <div className="max-w-screen-xl mx-auto px-4 text-center">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl leading-tight font-light">
+          Advocacia Especializada
+          <br />
+          em <span className="text-accent font-semibold">Direito Bancário</span>
+        </h1>
 
-          <Link
-            href="#"
-            className="inline-flex items-center bg-primary tracking-wide text-white border  rounded-sm px-3 py-3 font-bold gap-2"
+        <p className='mt-4 text-lg lg:text-xl'>Por 15 anos trabalhamos para os Bancos. Hoje, colocamos esse conhecimento a serviço da defesa dos nossos clientes.</p>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button
+            href="https://wa.me/5551989905849?text=Olá,%20por%20favor,%20vim%20do%20site%20e%20gostaria%20de%20consultar%20agora%20com%20um%20advogado"
+            variant="primary"
+            size="md"
+            className="max-sm:w-full"
           >
-            Fale Com um Advogado
-            <ArrowRight size={16} />
-          </Link>
+            Consultar agora
+          </Button>
 
-          <div className="mt-8 ">
-            <div>
-              <div className="bg-white rounded-2xl shadow-md flex">
-                <div className="grid divide-x grid-cols-2 divide-gray-200">
-                  {stats.map((stat, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center justify-center px-4 py-4 text-center min-w-[150px]"
-                    >
-                      <div>
-                        <span className="paragraph font-semibold">{stat.value}</span>
-                      </div>
-                      <div>
-                        <span className="muted">{stat.label}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <img
-                src={HeroBg.src}
-                alt=""
-                className="lg:hidden rounded-lg w-full bg-cover mt-8"
-              />
-            </div>
-          </div>
+          <Button
+            href="https://wa.me/5551989905849?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20um%20advogado"
+            variant="outline"
+            size="md"
+            className="max-sm:w-full"
+          >
+            Agendar consulta
+          </Button>
         </div>
 
         <img
-          src={HeroBg.src}
-          alt="Imagem principal: Advogada fazendo uma apresentação"
-          className="hidden lg:block w-[45%] h-full object-cover object-center absolute top-0 right-0"
+          src={heroImg.src}
+          alt="Advogadas do escritório"
+          className="hidden md:block mt-16 w-full max-w-4xl mx-auto object-cover rounded-xl shadow-md"
         />
       </div>
     </section>
